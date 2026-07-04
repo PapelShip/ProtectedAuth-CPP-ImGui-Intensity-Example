@@ -1,0 +1,35 @@
+﻿  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_impl_dx9.cpp
+  imgui_impl_win32.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+C:\Users\Admin\Desktop\PapelShipPeLoader\Intensity_Loader\imgui\imgui_widgets.cpp(1087,135): warning C4244: 'bağımsız değişken': 'double' - 'float' dönüşümü; veri kaybı olabilir
+C:\Users\Admin\Desktop\PapelShipPeLoader\Intensity_Loader\imgui\imgui_widgets.cpp(1087,92): warning C4244: 'bağımsız değişken': 'double' - 'float' dönüşümü; veri kaybı olabilir
+  main.cpp
+C:\Users\Admin\Desktop\PapelShipPeLoader\Intensity_Loader\main.cpp(97,12): warning C4267: 'bağımsız değişken': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\Admin\Desktop\PapelShipPeLoader\Intensity_Loader\main.cpp(106,12): warning C4267: 'bağımsız değişken': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\Admin\Desktop\PapelShipPeLoader\Intensity_Loader\main.cpp(115,12): warning C4267: 'bağımsız değişken': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\Admin\Desktop\PapelShipPeLoader\Intensity_Loader\main.cpp(124,12): warning C4267: 'bağımsız değişken': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\Admin\Desktop\PapelShipPeLoader\Intensity_Loader\main.cpp(133,12): warning C4267: 'bağımsız değişken': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+  Kod Üretiliyor...
+LINK : warning LNK4098: defaultlib 'LIBCMT' diğer kitaplıkların kullanımı ile çakışıyor; /NODEFAULTLIB:library kullanın
+  Intensity Loader.vcxproj -> C:\Users\Admin\Desktop\PapelShipPeLoader\Intensity_Loader\x64\Release\Intensity Loader.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
+  Embedding qPapelAuth DLL into target executable...
+  [*] qPapelPacker v1.0
+  [*] DLL    : C:\Users\Admin\Desktop\PapelShipPeLoader\Intensity_Loader\qPapelTools\qPapelAuth64.dll
+  [*] Input  : C:\Users\Admin\Desktop\PapelShipPeLoader\Intensity_Loader\x64\Release\Intensity Loader.exe
+  [*] Output : C:\Users\Admin\Desktop\PapelShipPeLoader\Intensity_Loader\dist\Intensity Loader_final_x64.exe
+  [*] Seed   : 0x12345678
+  
+  [+] DLL size: 9172992 bytes
+  [+] EXE size: 374784 bytes
+  [+] Encrypted payload: 9173004 bytes
+  [+] Section '.qpdata' injected successfully.
+  [+] Output written: C:\Users\Admin\Desktop\PapelShipPeLoader\Intensity_Loader\dist\Intensity Loader_final_x64.exe
+  [+] Final size: 9548288 bytes
+  
+  [OK] Pack complete! Distribute only: C:\Users\Admin\Desktop\PapelShipPeLoader\Intensity_Loader\dist\Intensity Loader_final_x64.exe
