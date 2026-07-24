@@ -11,7 +11,7 @@
 extern "C" {
 #endif
 
-
+// ── Types ───────────────────────────────────────────────────────
 typedef void* QPCTX;
 
 typedef struct {
@@ -21,7 +21,7 @@ typedef struct {
     char payloadType[32];
 } QP_ProductInfo;
 
-
+// ── Raw C Export Symbols (Global Scope) ─────────────────────────
 bool  QP_StubInit();
 QPCTX QP_CreateContext();
 void  QP_DestroyContext(QPCTX c);
@@ -34,8 +34,10 @@ char* QP_GetLicenseInfo(QPCTX c, const char* licenseKey);
 char* QP_FetchString(QPCTX c, const char* stringId, const char* licenseKey);
 int   QP_FetchFile(QPCTX c, const char* fileId, const char* licenseKey, unsigned char** outData, int* outLen);
 int   QP_RunFile(QPCTX c, const char* fileId, const char* licenseKey, const char* arguments);
+int   QP_ServerMapper(QPCTX c, const char* accessId, const char* targetProcess, const char* licenseKey);
 int   QP_CheckIntegrity(QPCTX c);
 int   QP_CheckDebugger(QPCTX c);
+char* QP_RunSecurityChecks(QPCTX c);
 void  QP_ReportEvent(QPCTX c, const char* eventType, const char* action, const char* eventData);
 void  QP_OptimizeClock(QPCTX c);
 char* QP_GetLastStatus(QPCTX c);
@@ -55,7 +57,7 @@ void  QP_FreeBytes(unsigned char* p);
 }
 #endif
 
-
+// ── Ergonomic C++ Namespace API Wrapper ─────────────────────────
 #ifdef __cplusplus
 namespace qpapel
 {
@@ -71,8 +73,10 @@ namespace qpapel
     inline char* FetchString(QPCTX c, const char* id, const char* lk)                                { return QP_FetchString(c, id, lk); }
     inline int   FetchFile(QPCTX c, const char* id, const char* lk, unsigned char** outD, int* outL) { return QP_FetchFile(c, id, lk, outD, outL); }
     inline int   RunFile(QPCTX c, const char* id, const char* lk, const char* args)                  { return QP_RunFile(c, id, lk, args); }
+    inline int   ServerMapper(QPCTX c, const char* accessId, const char* targetProcess, const char* licenseKey) { return QP_ServerMapper(c, accessId, targetProcess, licenseKey); }
     inline int   CheckIntegrity(QPCTX c)                                                             { return QP_CheckIntegrity(c); }
     inline int   CheckDebugger(QPCTX c)                                                              { return QP_CheckDebugger(c); }
+    inline char* RunSecurityChecks(QPCTX c)                                                          { return QP_RunSecurityChecks(c); }
     inline void  ReportEvent(QPCTX c, const char* ev, const char* act, const char* data)             { QP_ReportEvent(c, ev, act, data); }
     inline void  OptimizeClock(QPCTX c)                                                              { QP_OptimizeClock(c); }
     inline char* GetLastStatus(QPCTX c)                                                              { return QP_GetLastStatus(c); }
